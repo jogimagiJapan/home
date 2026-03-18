@@ -27,7 +27,7 @@ export const siteConfig = {
     {
       id: "order",
       title: "Order",
-      description: "波形をオーダーする",
+      description: "オーダーはこちらから",
       url: "https://tsumugune.com/",
     },
   ],

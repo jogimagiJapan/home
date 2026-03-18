@@ -36,8 +36,8 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { 
-        duration: 1, 
+      transition: {
+        duration: 1,
         ease: [0.215, 0.61, 0.355, 1.0], // cubic-out
       }
     }
@@ -58,21 +58,21 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
       <FloatingShapes />
 
       {/* ナビゲーション */}
-      <motion.nav 
+      <motion.nav
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
         className="fixed top-8 left-8 z-50 mix-blend-difference hidden md:block"
       >
-        <Link 
-          href="/" 
+        <Link
+          href="/"
           className="flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-white hover:opacity-60 transition-opacity"
         >
           <ArrowLeft size={16} />
           Back
         </Link>
       </motion.nav>
-      
+
       {/* モバイル用ナビゲーション */}
       <nav className="flex md:hidden justify-start mb-8">
         <Link href="/" className="flex items-center gap-2 text-xs uppercase tracking-widest text-brand-accent">
@@ -88,7 +88,7 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
         <ProfileHero images={profileImages} />
       </motion.div>
 
-      <motion.main 
+      <motion.main
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -109,7 +109,7 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
               </h2>
             </motion.div>
           </div>
-          
+
           <div className="md:col-span-5 md:col-start-8 mt-4 md:mt-20">
             <motion.div variants={itemVariants} className="flex flex-col gap-6">
               <div className="flex items-center gap-4">
@@ -129,13 +129,13 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
         {profile.sections.map((section, sIdx) => {
           const isEven = sIdx % 2 === 0;
           return (
-            <section 
-              key={sIdx} 
+            <section
+              key={sIdx}
               className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-start"
             >
               {/* Title Column */}
               <div className={isEven ? "md:col-span-11 md:col-start-2" : "md:col-span-11 md:col-start-1"}>
-                <motion.div 
+                <motion.div
                   variants={itemVariants}
                   className="relative group mb-12"
                 >
@@ -150,7 +150,7 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
               <div className={isEven ? "md:col-span-7 md:col-start-6" : "md:col-span-7 md:col-start-2"}>
                 <div className="flex flex-col gap-12">
                   {section.content.map((para, pIdx) => (
-                    <motion.p 
+                    <motion.p
                       key={pIdx}
                       initial="hidden"
                       whileInView="visible"
@@ -170,7 +170,7 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
         })}
 
         {/* Closing Quote: Huge & Centered with Parallax decoration */}
-        <motion.section 
+        <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -178,10 +178,10 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
           className="relative py-40 border-t border-brand-accent/5 flex justify-center items-center"
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-             <div className="w-[300px] h-[300px] border-[10px] border-brand-accent/5 rounded-full" />
+            <div className="w-[300px] h-[300px] border-[10px] border-brand-accent/5 rounded-full" />
           </div>
           <p className="font-playfair text-4xl sm:text-5xl md:text-7xl font-bold text-center text-brand-accent/20 leading-tight md:max-w-4xl [text-wrap:balance]">
-            "Sewing memories into timeless art."
+            "Translating the invisible into the tactile."
           </p>
         </motion.section>
       </motion.main>
