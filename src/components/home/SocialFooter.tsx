@@ -65,7 +65,7 @@ export function SocialFooter() {
         })}
       </div>
       <p className="font-montserrat text-xs tracking-widest text-brand-accent/70">
-        © {new Date().getFullYear()} {siteConfig.name}
+        © {new Date().getFullYear()} jõgi mägi
       </p>
     </footer>
   );
