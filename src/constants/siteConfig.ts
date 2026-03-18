@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "jõgi mägi",
+  name: "SEW THE SOUND",
   logo: "/logo.png",
   statements: {
     main: "記憶を纏う、音の刺繍",
