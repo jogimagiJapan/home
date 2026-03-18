@@ -8,26 +8,26 @@ export const siteConfig = {
   links: [
     {
       id: "gallery",
-      title: "Works",
+      title: "Instagram",
       description: "活動記録",
       url: "https://www.instagram.com/jogimagi_official/",
     },
     {
       id: "flow",
-      title: "Flow",
-      description: "録音から完成までの軌跡",
+      title: "Process",
+      description: "音が波形になるまで",
       url: "https://sts-process-visualization.jogimagi.com/",
     },
     {
       id: "concept",
       title: "Concept",
-      description: "音の波形の可視化",
+      description: "波形が持つ意味",
       url: "https://audiowaves-visual-logic.jogimagi.com/",
     },
     {
       id: "order",
       title: "Order",
-      description: "オーダーはこちらから",
+      description: "ご注文はこちらから",
       url: "https://tsumugune.com/",
     },
   ],
@@ -38,7 +38,7 @@ export const siteConfig = {
   },
   profile: {
     title: "Voice from Director",
-    subtitle: "「音」を纏い、刺繍をアップデートする。",
+    subtitle: "「音」を纏い、\n刺繍をアップデートする。",
     director: {
       name: "jõgi mägi　ヨギマギ",
       bio: "1997年生まれ。幼少期より、現在では60年以上続く祖母の刺繍工房で糸と針に囲まれて育つ。大学でデザインを学び、会社員として働く一方で、自身のルーツである刺繍工房の技術をベースに、テクノロジーを掛け合わせた新しいアートの在り方を追求している。",
@@ -53,10 +53,10 @@ export const siteConfig = {
         ]
       },
       {
-        title: "体験をデザインするための独自システム",
+        title: "体験をデザインするための\n独自のシステム",
         content: [
           "単に音を形にするだけでなく、録音から刺繍が完成するまでの「一連のライブ体験」そのものに価値を置きたい。そのこだわりを形にするため、既存のソフトに頼らず、0から専用のシステムを構築しました。",
-          "「自分の声が、今、目の前で糸によってカタチになっていく。」",
+          "「自分の声が、目の前で糸によってカタチになっていく。」",
           "その驚きと感動を、一切の妥協なく届けるための挑戦でした。"
         ]
       },

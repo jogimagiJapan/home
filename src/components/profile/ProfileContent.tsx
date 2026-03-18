@@ -9,6 +9,8 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
+import { RippleEffect } from "@/components/profile/RippleEffect";
+
 interface ProfileContentProps {
   profileImages: string[];
 }
@@ -43,15 +45,6 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
     }
   };
 
-  // マスクスライドアニメーション（Webマガジン風）
-  const maskVariants: Variants = {
-    hidden: { scaleX: 0 },
-    visible: {
-      scaleX: 1,
-      transition: { duration: 1.2, ease: [0.19, 1, 0.22, 1] }
-    }
-  };
-
   return (
     <Container className="relative overflow-visible pb-32">
       {/* 背景装飾：視認性を高めたパララックス付与 */}
@@ -74,11 +67,11 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
       </motion.nav>
 
       {/* モバイル用ナビゲーション */}
-      <nav className="flex md:hidden justify-start mb-8">
+      <div className="flex md:hidden justify-start mb-8">
         <Link href="/" className="flex items-center gap-2 text-xs uppercase tracking-widest text-brand-accent">
           <ArrowLeft size={14} /> Back
         </Link>
-      </nav>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
@@ -98,13 +91,14 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
         {/* Intro Section: Asymmetric Layout */}
         <section className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-8 md:col-start-1">
-            <motion.div variants={itemVariants} className="flex flex-col gap-6">
+            <motion.div variants={itemVariants} className="flex flex-col gap-6 relative group">
+              <RippleEffect />
               <span className="font-montserrat text-xs tracking-[0.5em] uppercase text-brand-accent/60">
                 {profile.title}
               </span>
-              <h2 className="font-noto-sans-jp text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] text-brand-text [text-wrap:balance]">
+              <h2 className="font-noto-sans-jp text-3xl sm:text-4xl md:text-6xl font-bold leading-[1.1] text-brand-text [text-wrap:balance] relative z-10 whitespace-pre-wrap">
                 {profile.subtitle.split("").map((char, i) => (
-                  <span key={i} className="inline-block">{char}</span>
+                  char === "\n" ? <br key={i} /> : <span key={i} className="inline-block">{char}</span>
                 ))}
               </h2>
             </motion.div>
@@ -139,7 +133,8 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
                   variants={itemVariants}
                   className="relative group mb-12"
                 >
-                  <h3 className="font-playfair text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-brand-text/10 transition-colors group-hover:text-brand-text/20">
+                  <RippleEffect />
+                  <h3 className="font-playfair text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-brand-text/10 transition-colors group-hover:text-brand-text/20 relative z-10 whitespace-pre-wrap">
                     {section.title}
                   </h3>
                   <div className="absolute -bottom-4 left-0 w-32 h-[1px] bg-brand-accent/20" />

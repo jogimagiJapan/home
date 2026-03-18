@@ -26,13 +26,16 @@ export function ProfileHero({ images }: ProfileHeroProps) {
 
   return (
     <section className="relative w-full rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-[16/9] shadow-lg isolate bg-brand-bg">
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="popLayout">
         <motion.div
           key={currentIndex}
-          initial={{ opacity: 0, scale: 1.1 }}
+          initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ 
+            opacity: { duration: 1.5, ease: "easeInOut" },
+            scale: { duration: 6, ease: "linear" } // slow zoom out effect
+          }}
           className="absolute inset-0"
         >
           {images[currentIndex] ? (
