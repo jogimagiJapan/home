@@ -134,7 +134,7 @@ export function ProfileContent({ profileImages }: ProfileContentProps) {
                   className="relative group mb-12"
                 >
                   <RippleEffect />
-                  <h3 className="font-playfair text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-brand-text/10 transition-colors group-hover:text-brand-text/20 relative z-10 whitespace-pre-wrap">
+                  <h3 className="font-playfair text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-brand-text/40 transition-colors group-hover:text-brand-text/60 relative z-10 whitespace-pre-wrap">
                     {section.title}
                   </h3>
                   <div className="absolute -bottom-4 left-0 w-32 h-[1px] bg-brand-accent/20" />

@@ -67,7 +67,7 @@ export function ProfileHero({ images }: ProfileHeroProps) {
         className="absolute bottom-8 left-8 pointer-events-none"
       >
         <div className="w-12 h-[1px] bg-brand-accent/40 mb-4" />
-        <h1 className="font-playfair text-4xl sm:text-5xl font-bold text-brand-text/40">
+        <h1 className="font-playfair text-4xl sm:text-5xl font-bold text-brand-text/70">
           About
         </h1>
       </motion.div>

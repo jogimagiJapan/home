@@ -11,7 +11,7 @@ import { siteConfig } from "@/constants/siteConfig";
  */
 export function Hero() {
   return (
-    <section className="relative w-full rounded-2xl overflow-hidden min-h-[400px] sm:min-h-[500px] flex flex-col justify-end p-6 md:p-8 isolate shadow-md">
+    <section className="relative w-full rounded-2xl overflow-hidden aspect-[9/16] sm:aspect-video flex flex-col justify-end p-6 md:p-8 isolate shadow-md">
       {/* Background Video (with placeholder support) */}
       <div className="absolute inset-0 -z-10 bg-brand-accent/20">
         <video
