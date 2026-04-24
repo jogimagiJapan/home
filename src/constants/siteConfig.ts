@@ -34,7 +34,7 @@ export const siteConfig = {
   socials: {
     instagram: "https://www.instagram.com/jogimagi_official/",
     profile: "/profile",
-    email: "mailto:11228shu@gmail.com",
+    email: "mailto:hello@jogimagi.com",
   },
   profile: {
     title: "Voice from Director",
