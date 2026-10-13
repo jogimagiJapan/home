@@ -8,6 +8,7 @@ export const siteConfig = {
     body: "クローゼットで眠っていた服に、大切な人の声や、その時の決意を刻む。するとその一着は、再び手放せないお気に入りへとかわる。音の記憶を纏うことで、会話が生まれ、思い出がより濃く残っていく。",
   },
   logo: "/logo.png",
+  logoTsumugune: "/logo_tsuugune.png",
   hero: {
     src: "/works/DSC09279.jpeg",
     alt: "刺繍枠に張った白い生地を整える手元",
@@ -18,37 +19,76 @@ export const siteConfig = {
       src: "/works/IMG_8155.JPG",
       alt: "白い長袖の背中に刺繍された声の波形",
       caption: "22 FEB 2023  /  34.632772, 135.510164",
-      layout: "feature",
     },
     {
       src: "/works/IMG_8052.JPG",
       alt: "ジャケットに刺繍された波形と座標",
       caption: "34.632772, 135.510164",
-      layout: "pair",
     },
     {
       src: "/works/IMG_8188.JPG",
       alt: "水色のスウェットに金糸で刻まれた波形",
       caption: "22 FEB 2026  /  34.692272, 135.510161",
-      layout: "pair",
     },
     {
       src: "/works/DSC09293.jpeg",
       alt: "刺繍機が白い生地に波形を縫っている",
       caption: "Process",
-      layout: "wide",
     },
     {
       src: "/works/IMG_2239.JPG",
       alt: "白いTシャツ胸元の波形と記録",
       caption: "05 AUG 2023  /  FabCafe Osaka",
-      layout: "pair",
     },
     {
       src: "/works/IMG_8097.JPG",
       alt: "スウェットパンツのポケットに刺繍された波形",
       caption: "22 FEB 2026  /  34.632772, 135.510164",
-      layout: "pair",
+    },
+    {
+      src: "/works/IMG_8063.JPG",
+      alt: "刺繍が施されたウェアのディテール",
+      caption: "Works",
+    },
+    {
+      src: "/works/IMG_8129.JPG",
+      alt: "刺繍と生地のテクスチャ",
+      caption: "Works",
+    },
+    {
+      src: "/works/DSC09318.jpeg",
+      alt: "刺繍機まわりの作業風景",
+      caption: "Process",
+    },
+    {
+      src: "/works/DSC05237.JPG",
+      alt: "ライブ刺繍の様子",
+      caption: "Works",
+    },
+    {
+      src: "/works/DSC05241.JPG",
+      alt: "刺繍作品のクローズアップ",
+      caption: "Works",
+    },
+    {
+      src: "/works/DSC05248.JPG",
+      alt: "音の刺繍が施されたアイテム",
+      caption: "Works",
+    },
+    {
+      src: "/works/DSC05251.JPG",
+      alt: "会場での刺繍体験",
+      caption: "Works",
+    },
+    {
+      src: "/works/DSC05255.JPG",
+      alt: "完成した刺繍のディテール",
+      caption: "Works",
+    },
+    {
+      src: "/works/jogimagi_2.jpg",
+      alt: "jõgi mägi の刺繍作品",
+      caption: "Works",
     },
   ],
   links: {
@@ -64,11 +104,15 @@ export const siteConfig = {
     },
     order: {
       title: "オーダーする",
-      url: "https://tsumugune.com/",
+      url: "https://tsumugune.jogimagi.com/",
     },
     instagram: {
       title: "Instagram",
       url: "https://www.instagram.com/jogimagi_official/",
+    },
+    tsumuguneInstagram: {
+      title: "tsumugune Instagram",
+      url: "https://www.instagram.com/tsumugune/",
     },
     email: {
       title: "Email",
