@@ -127,7 +127,7 @@ export const siteConfig = {
   },
   profile: {
     image: {
-      src: "/profile/DSC09323.jpeg",
+      src: "/profile/profile-hero.jpg",
       alt: "刺繍機の前で作業する jõgi mägi",
     },
     title: "Voice from Director",
