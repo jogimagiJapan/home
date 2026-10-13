@@ -14,12 +14,17 @@ export const siteConfig = {
     alt: "刺繍枠に張った白い生地を整える手元",
     video: "/videos/hero-concept.mp4",
   },
-  works: [
-    {
-      src: "/works/IMG_8155.JPG",
-      alt: "白い長袖の背中に刺繍された声の波形",
-      caption: "22 FEB 2023  /  34.632772, 135.510164",
-    },
+  worksMain: {
+    src: "/works/main.jpg",
+    alt: "白い長袖の背中に刺繍された声の波形",
+    caption: "22 FEB 2023  /  34.632772, 135.510164",
+  },
+  worksProcess: {
+    src: "/works/process.jpg",
+    alt: "刺繍機が白い生地に波形を縫っている",
+    caption: "Process",
+  },
+  worksGroupA: [
     {
       src: "/works/IMG_8052.JPG",
       alt: "ジャケットに刺繍された波形と座標",
@@ -31,21 +36,6 @@ export const siteConfig = {
       caption: "22 FEB 2026  /  34.692272, 135.510161",
     },
     {
-      src: "/works/DSC09293.jpeg",
-      alt: "刺繍機が白い生地に波形を縫っている",
-      caption: "Process",
-    },
-    {
-      src: "/works/IMG_2239.JPG",
-      alt: "白いTシャツ胸元の波形と記録",
-      caption: "05 AUG 2023  /  FabCafe Osaka",
-    },
-    {
-      src: "/works/IMG_8097.JPG",
-      alt: "スウェットパンツのポケットに刺繍された波形",
-      caption: "22 FEB 2026  /  34.632772, 135.510164",
-    },
-    {
       src: "/works/IMG_8063.JPG",
       alt: "刺繍が施されたウェアのディテール",
       caption: "Works",
@@ -54,11 +44,6 @@ export const siteConfig = {
       src: "/works/IMG_8129.JPG",
       alt: "刺繍と生地のテクスチャ",
       caption: "Works",
-    },
-    {
-      src: "/works/DSC09318.jpeg",
-      alt: "刺繍機まわりの作業風景",
-      caption: "Process",
     },
     {
       src: "/works/DSC05237.JPG",
@@ -74,6 +59,23 @@ export const siteConfig = {
       src: "/works/DSC05248.JPG",
       alt: "音の刺繍が施されたアイテム",
       caption: "Works",
+    },
+  ],
+  worksGroupB: [
+    {
+      src: "/works/IMG_2239.JPG",
+      alt: "白いTシャツ胸元の波形と記録",
+      caption: "05 AUG 2023  /  FabCafe Osaka",
+    },
+    {
+      src: "/works/IMG_8097.JPG",
+      alt: "スウェットパンツのポケットに刺繍された波形",
+      caption: "22 FEB 2026  /  34.632772, 135.510164",
+    },
+    {
+      src: "/works/DSC09318.jpeg",
+      alt: "刺繍機まわりの作業風景",
+      caption: "Process",
     },
     {
       src: "/works/DSC05251.JPG",
@@ -167,7 +169,7 @@ export const siteConfig = {
     subtitle: "音が波形になるまで",
     lead: "声を録り、かたちにし、目の前で糸にする。録音から完成まで、その場で完結する。",
     image: {
-      src: "/works/DSC09293.jpeg",
+      src: "/works/process.jpg",
       alt: "刺繍機が白い生地に波形を縫っている",
     },
     steps: [
@@ -220,7 +222,7 @@ export const siteConfig = {
     subtitle: "波形が持つ意味",
     lead: "ひとつの声を、3つの波形に分解する。それぞれが糸になり、重なって一枚の刺繍になる。",
     image: {
-      src: "/works/IMG_8155.JPG",
+      src: "/works/main.jpg",
       alt: "白い服の背中に刺繍された声の波形",
     },
     waves: [

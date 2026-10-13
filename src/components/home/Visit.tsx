@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/constants/siteConfig";
 import { Frame } from "@/components/layout/Frame";
 
 export function Visit() {
-  const { process, concept, order, profile } = siteConfig.links;
+  const { process, concept, order, profile, tsumuguneInstagram } =
+    siteConfig.links;
 
   return (
     <section className="border-t border-line py-20 sm:py-28">
@@ -56,6 +58,24 @@ export function Visit() {
         >
           {order.title}
         </a>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href={tsumuguneInstagram.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={tsumuguneInstagram.title}
+            className="relative block h-[148px] w-[148px] opacity-90 transition-opacity hover:opacity-100 sm:h-[168px] sm:w-[168px]"
+          >
+            <Image
+              src={siteConfig.logoTsumugune}
+              alt="tsumugune"
+              fill
+              className="object-contain"
+              sizes="(max-width: 640px) 148px, 168px"
+            />
+          </a>
+        </div>
       </Frame>
     </section>
   );

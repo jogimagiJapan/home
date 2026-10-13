@@ -9,16 +9,40 @@ import { cn } from "@/utils/cn";
 const PAUSE_MS = 1800;
 const MOVE_MS = 520;
 
-export function Works() {
+type WorkItem = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
+function Caption({
+  children,
+  className,
+}: {
+  children: string;
+  className?: string;
+}) {
+  return (
+    <figcaption
+      className={cn(
+        "mt-3 font-mono text-[10px] tracking-[0.12em] text-muted sm:text-[11px]",
+        className
+      )}
+    >
+      {children}
+    </figcaption>
+  );
+}
+
+function WorksMarquee({ items }: { items: readonly WorkItem[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const indexRef = useRef(0);
   const [paused, setPaused] = useState(false);
-  const works = siteConfig.works;
-  const loop = [...works, ...works];
+  const loop = [...items, ...items];
 
   useEffect(() => {
     const track = trackRef.current;
-    if (!track || paused) return;
+    if (!track || paused || items.length === 0) return;
 
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
@@ -50,7 +74,7 @@ export function Works() {
       indexRef.current += 1;
       jumpTo(indexRef.current, true);
 
-      if (indexRef.current >= works.length) {
+      if (indexRef.current >= items.length) {
         timeoutId = window.setTimeout(() => {
           if (cancelled) return;
           indexRef.current = 0;
@@ -70,7 +94,52 @@ export function Works() {
       cancelled = true;
       window.clearTimeout(timeoutId);
     };
-  }, [paused, works.length]);
+  }, [paused, items.length]);
+
+  return (
+    <div
+      className="overflow-hidden"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          setPaused(false);
+        }
+      }}
+    >
+      <div
+        ref={trackRef}
+        className={cn(
+          "flex w-max will-change-transform",
+          "gap-3 px-5 sm:gap-10 sm:px-8 lg:px-[max(2rem,calc((100vw-1080px)/2))]"
+        )}
+      >
+        {loop.map((work, i) => (
+          <figure
+            key={`${work.src}-${i}`}
+            className="w-[78vw] shrink-0 sm:w-[calc((100vw-5rem-2.5rem)/2)] lg:w-[calc((min(100vw,1080px)-2.5rem)/2)]"
+          >
+            <div className="relative aspect-[4/5] overflow-hidden bg-line/40">
+              <Image
+                src={work.src}
+                alt={work.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 78vw, 50vw"
+                loading={i < 4 ? "eager" : "lazy"}
+              />
+            </div>
+            <Caption>{work.caption}</Caption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function Works() {
+  const { worksMain, worksProcess, worksGroupA, worksGroupB } = siteConfig;
 
   return (
     <section className="pb-20 sm:pb-32">
@@ -80,45 +149,44 @@ export function Works() {
         </p>
       </Frame>
 
-      <div
-        className="overflow-hidden"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-        onFocusCapture={() => setPaused(true)}
-        onBlurCapture={(event) => {
-          if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
-            setPaused(false);
-          }
-        }}
-      >
-        <div
-          ref={trackRef}
-          className={cn(
-            "flex w-max will-change-transform",
-            "gap-3 px-5 sm:gap-4 sm:px-8 lg:px-[max(2rem,calc((100vw-1080px)/2))]"
-          )}
-        >
-          {loop.map((work, i) => (
-            <figure
-              key={`${work.src}-${i}`}
-              className="w-[78vw] shrink-0 sm:w-[42vw] lg:w-[28rem]"
-            >
-              <div className="relative aspect-[3/2] overflow-hidden bg-line/40">
-                <Image
-                  src={work.src}
-                  alt={work.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 78vw, (max-width: 1024px) 42vw, 28rem"
-                  loading={i < 4 ? "eager" : "lazy"}
-                />
-              </div>
-              <figcaption className="mt-3 font-mono text-[10px] tracking-[0.12em] text-muted sm:text-[11px]">
-                {work.caption}
-              </figcaption>
-            </figure>
-          ))}
+      <figure>
+        <div className="relative aspect-[4/5] w-full overflow-hidden bg-line/40 sm:aspect-[5/6]">
+          <Image
+            src={worksMain.src}
+            alt={worksMain.alt}
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
         </div>
+        <Caption className="px-5 sm:px-8 lg:px-[max(2rem,calc((100vw-1080px)/2))]">
+          {worksMain.caption}
+        </Caption>
+      </figure>
+
+      <div className="mt-16 sm:mt-20">
+        <WorksMarquee items={worksGroupA} />
+      </div>
+
+      <figure className="mt-16 sm:mt-20">
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-line/40">
+          <Image
+            src={worksProcess.src}
+            alt={worksProcess.alt}
+            fill
+            className="object-cover"
+            sizes="100vw"
+            loading="eager"
+          />
+        </div>
+        <Caption className="px-5 sm:px-8 lg:px-[max(2rem,calc((100vw-1080px)/2))]">
+          {worksProcess.caption}
+        </Caption>
+      </figure>
+
+      <div className="mt-16 sm:mt-20">
+        <WorksMarquee items={worksGroupB} />
       </div>
     </section>
   );

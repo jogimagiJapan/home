@@ -1,16 +1,13 @@
 import { siteConfig } from "@/constants/siteConfig";
-import { BrandLogos } from "@/components/layout/BrandLogos";
 import { Frame } from "@/components/layout/Frame";
+import { Logo } from "@/components/layout/Logo";
 
 export function Footer() {
   return (
     <footer className="border-t border-line py-12 sm:py-16">
       <Frame className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
         <div className="flex flex-col gap-3">
-          <BrandLogos
-            logoClassName="h-6 w-[128px] sm:h-7 sm:w-[148px]"
-            tsumuguneClassName="h-6 w-6 sm:h-7 sm:w-7"
-          />
+          <Logo className="h-6 w-[128px] sm:h-7 sm:w-[148px]" />
           <p className="font-sans text-[12px] tracking-[0.14em] text-muted">
             {siteConfig.name}
           </p>
