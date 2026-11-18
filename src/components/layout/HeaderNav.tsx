@@ -8,6 +8,7 @@ import { cn } from "@/utils/cn";
 const items = [
   { href: siteConfig.links.process.url, label: siteConfig.links.process.title },
   { href: siteConfig.links.concept.url, label: siteConfig.links.concept.title },
+  { href: siteConfig.links.events.url, label: siteConfig.links.events.title },
   { href: siteConfig.links.profile.url, label: siteConfig.links.profile.title },
   {
     href: siteConfig.links.order.url,

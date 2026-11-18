@@ -124,7 +124,129 @@ export const siteConfig = {
       title: "Profile",
       url: "/profile",
     },
+    events: {
+      title: "Events",
+      description: "出展・ポップアップ",
+      url: "/events",
+    },
   },
+  events: {
+    title: "Events",
+    lead: "出展・ポップアップの記録。",
+    years: [
+      {
+        year: "2027",
+        items: [
+          {
+            title: "Talk at 対流ポット",
+            date: "1/27 (Wed)",
+            venue: "SpringX, Umeda, Osaka",
+          },
+        ],
+      },
+      {
+        year: "2026",
+        items: [
+          {
+            title: "COCOLON Christmas 2026",
+            date: "12/19 (Sat)",
+            venue: "Tower Hall Funabori, Funabori, Tokyo",
+          },
+          {
+            title: "あべのミックス Vol.3",
+            date: "12/13 (Sun)",
+            venue: "Showacho / Fuminosato Shopping Street, Abeno, Osaka",
+          },
+          {
+            title: "UMEKITA SOUND BAZAAR",
+            date: "11/21 (Sat) – 11/23 (Mon)",
+            venue: "VS., Umeda, Osaka",
+          },
+          {
+            title: "méli mélo osaka 2026",
+            date: "11/7 (Sat) – 11/8 (Sun)",
+            venue: "Hattori Ryokuchi, Toyonaka, Osaka",
+          },
+          {
+            title: "CULTURE SNACK '26",
+            date: "10/2 (Fri) – 10/3 (Sat)",
+            venue: "Grand Green Osaka, Umeda, Osaka",
+          },
+          {
+            title: "HUMMING OASIS 2026",
+            date: "8/8 (Sat) – 8/9 (Sun)",
+            venue: "Osaka Sakishima Morina, Sakishima, Osaka",
+          },
+          {
+            title: "Pop up in 酒パンつつみ",
+            date: "7/4 (Sat)",
+            venue: "酒パンつつみ, Nagahoribashi, Osaka",
+          },
+          {
+            title: "Pop up in N.C.C",
+            date: "5/30 (Sat) – 5/31 (Sun)",
+            venue: "Nagai Culture Center, Nagai, Osaka",
+          },
+          {
+            title: "あべのミックス Vol.2",
+            date: "4/29 (Wed)",
+            venue: "Showacho / Fuminosato Shopping Street, Abeno, Osaka",
+          },
+          {
+            title: "CYENSEFICTION",
+            date: "4/25 (Sat)",
+            venue: "FUZZ, Mikunigaoka, Osaka",
+          },
+          {
+            title: "Pop up in OUTPOST",
+            date: "2/21 (Sat) – 2/22 (Sun)",
+            venue: "OUTPOST, Abeno, Osaka",
+          },
+          {
+            title: "おおきな木の下で",
+            date: "2/7 (Sat)",
+            venue: "ホトリヲ, Hommachibashi, Osaka",
+          },
+        ],
+      },
+      {
+        year: "2025",
+        items: [
+          {
+            title: "Pop up in CCC",
+            date: "12/20 (Sat)",
+            venue: "Colon Cheer Chamber, Tengachaya, Osaka",
+          },
+          {
+            title: "Pop up in RÜCKWÄRTS",
+            date: "11/29 (Sat) – 11/30 (Sun)",
+            venue: "RÜCKWÄRTS, Harinakano, Osaka",
+          },
+          {
+            title: "méli mélo osaka 2025",
+            date: "11/8 (Sat) – 11/9 (Sun)",
+            venue: "Hattori Ryokuchi, Toyonaka, Osaka",
+          },
+          {
+            title: "Pop up in 寿の湯",
+            date: "8/13 (Wed)",
+            venue: "寿の湯, Sanda, Hyogo",
+          },
+          {
+            title: "Pop up in FabCafe Osaka",
+            date: "8/9 (Sat)",
+            venue: "FabCafe Osaka, Minamimorimachi, Osaka",
+          },
+          {
+            title: "EXPO共鳴フェス -人間響命祭-",
+            date: "5/15 (Thu)",
+            venue: "EXPO Arena Matsuri, Yumeshima, Osaka",
+          },
+        ],
+      },
+    ],
+  },
+
   profile: {
     image: {
       src: "/profile/profile-hero.jpg",

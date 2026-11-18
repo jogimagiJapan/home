@@ -4,7 +4,7 @@ import { siteConfig } from "@/constants/siteConfig";
 import { Frame } from "@/components/layout/Frame";
 
 export function Visit() {
-  const { process, concept, order, profile, tsumuguneInstagram } =
+  const { process, concept, events, order, profile, tsumuguneInstagram } =
     siteConfig.links;
 
   return (
@@ -35,6 +35,17 @@ export function Visit() {
             </span>
             <span className="text-[13px] text-muted transition-colors group-hover:text-ink">
               {concept.description}
+            </span>
+          </Link>
+          <Link
+            href={events.url}
+            className="group flex max-w-md flex-col gap-1 border-b border-line pb-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+          >
+            <span className="font-sans text-[13px] tracking-[0.16em]">
+              {events.title}
+            </span>
+            <span className="text-[13px] text-muted transition-colors group-hover:text-ink">
+              {events.description}
             </span>
           </Link>
           <Link
