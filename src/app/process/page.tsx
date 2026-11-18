@@ -32,13 +32,13 @@ export default function ProcessPage() {
       />
 
       <Frame className="pb-20 sm:pb-32">
-        <ol className="flex max-w-[38rem] flex-col gap-20 sm:gap-28">
+        <ol className="flex max-w-[52rem] flex-col gap-20 sm:gap-28">
           {process.steps.map((step) => (
             <li key={step.number}>
               <p className="font-mono text-[11px] tracking-[0.18em] text-muted">
                 {step.number}  /  {step.en}
               </p>
-              <h2 className="mt-4 text-xl font-medium leading-snug sm:text-2xl">
+              <h2 className="mt-4 text-xl font-medium leading-snug text-pretty sm:text-2xl">
                 {step.title}
               </h2>
               <p className="mt-2 text-[14px] text-muted">{step.subtitle}</p>
@@ -46,7 +46,7 @@ export default function ProcessPage() {
                 {step.content.map((para) => (
                   <p
                     key={para}
-                    className="text-[15px] leading-[2] text-muted sm:text-base"
+                    className="text-[15px] leading-[2] text-muted text-pretty sm:text-base"
                   >
                     {para}
                   </p>
@@ -56,13 +56,13 @@ export default function ProcessPage() {
           ))}
         </ol>
 
-        <div className="mt-24 flex max-w-[38rem] flex-col gap-16 border-t border-line pt-16 sm:mt-32 sm:gap-20">
+        <div className="mt-24 flex max-w-[52rem] flex-col gap-16 border-t border-line pt-16 sm:mt-32 sm:gap-20">
           {process.notes.map((note) => (
             <article key={note.title}>
-              <h2 className="text-xl font-medium leading-snug sm:text-2xl">
+              <h2 className="text-xl font-medium leading-snug text-pretty sm:text-2xl">
                 {note.title}
               </h2>
-              <p className="mt-6 text-[15px] leading-[2] text-muted sm:text-base">
+              <p className="mt-6 text-[15px] leading-[2] text-muted text-pretty sm:text-base">
                 {note.content}
               </p>
             </article>

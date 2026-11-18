@@ -33,32 +33,32 @@ export default function ConceptPage() {
       />
 
       <Frame className="pb-20 sm:pb-32">
-        <ol className="flex max-w-[38rem] flex-col gap-20 sm:gap-28">
+        <ol className="flex max-w-[52rem] flex-col gap-20 sm:gap-28">
           {concept.waves.map((wave) => (
             <li key={wave.number}>
               <WaveMark kind={wave.mark} />
               <p className="mt-6 font-mono text-[11px] tracking-[0.18em] text-muted">
                 {wave.number}  /  {wave.en}
               </p>
-              <h2 className="mt-4 text-xl font-medium leading-snug sm:text-2xl">
+              <h2 className="mt-4 text-xl font-medium leading-snug text-pretty sm:text-2xl">
                 {wave.title}
               </h2>
               <p className="mt-2 text-[14px] text-muted">{wave.trigger}</p>
-              <p className="mt-8 text-[15px] leading-[2] text-muted sm:text-base">
+              <p className="mt-8 text-[15px] leading-[2] text-muted text-pretty sm:text-base">
                 {wave.background}
               </p>
-              <p className="mt-6 text-[15px] leading-[2] text-muted sm:text-base">
+              <p className="mt-6 text-[15px] leading-[2] text-muted text-pretty sm:text-base">
                 {wave.characteristic}
               </p>
             </li>
           ))}
         </ol>
 
-        <article className="mt-24 max-w-[38rem] border-t border-line pt-16 sm:mt-32">
-          <h2 className="text-xl font-medium leading-snug sm:text-2xl">
+        <article className="mt-24 max-w-[52rem] border-t border-line pt-16 sm:mt-32">
+          <h2 className="text-xl font-medium leading-snug text-pretty sm:text-2xl">
             {concept.synthesis.title}
           </h2>
-          <p className="mt-6 text-[15px] leading-[2] text-muted sm:text-base">
+          <p className="mt-6 text-[15px] leading-[2] text-muted text-pretty sm:text-base">
             {concept.synthesis.content}
           </p>
           <ul className="mt-12 flex flex-col gap-4 border-t border-line pt-8">

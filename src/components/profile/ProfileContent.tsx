@@ -22,33 +22,33 @@ export function ProfileContent() {
         <p className="font-sans text-[11px] tracking-[0.28em] text-muted">
           {profile.title}
         </p>
-        <h1 className="mt-5 max-w-[14em] text-[1.75rem] font-medium leading-[1.45] tracking-tight whitespace-pre-wrap sm:text-[2.25rem]">
+        <h1 className="mt-5 max-w-[20em] text-[1.75rem] font-medium leading-[1.45] tracking-tight text-pretty whitespace-pre-wrap sm:text-[2.25rem]">
           {profile.subtitle}
         </h1>
 
-        <div className="mt-14 max-w-[38rem] border-t border-line pt-10">
+        <div className="mt-14 max-w-[52rem] border-t border-line pt-10">
           <p className="font-sans text-[13px] tracking-[0.16em]">
             {profile.director.name}
             <span className="ml-3 tracking-[0.2em] text-muted">
               {profile.director.kana}
             </span>
           </p>
-          <p className="mt-6 text-[15px] leading-[2] text-muted sm:text-base">
+          <p className="mt-6 text-[15px] leading-[2] text-muted text-pretty sm:text-base">
             {profile.director.bio}
           </p>
         </div>
 
         <div className="mt-24 flex flex-col gap-20 sm:mt-32 sm:gap-28">
           {profile.sections.map((section) => (
-            <article key={section.title} className="max-w-[38rem]">
-              <h2 className="text-xl font-medium leading-snug sm:text-2xl">
+            <article key={section.title} className="max-w-[52rem]">
+              <h2 className="text-xl font-medium leading-snug text-pretty sm:text-2xl">
                 {section.title}
               </h2>
               <div className="mt-8 flex flex-col gap-6">
                 {section.content.map((para) => (
                   <p
                     key={para}
-                    className="text-[15px] leading-[2] text-muted sm:text-base"
+                    className="text-[15px] leading-[2] text-muted text-pretty sm:text-base"
                   >
                     {para}
                   </p>
