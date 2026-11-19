@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Instrument_Sans, Noto_Sans_JP } from "next/font/google";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
@@ -37,9 +35,7 @@ export default function RootLayout({
       <body
         className={`${instrumentSans.variable} ${notoSansJP.variable} ${geistMono.variable} bg-paper text-ink antialiased`}
       >
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

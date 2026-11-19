@@ -365,6 +365,8 @@ SEW THE SOUND ホームページ — サイト内容・構成資料
   - テキスト: SEW THE SOUND
   - Instagram → https://www.instagram.com/jogimagi_official/
   - Email → mailto:hello@jogimagi.com
+  - 商標注記: 「音の刺繍」は商標登録出願中です。
+    （フッター下段・小さめの muted テキスト。siteConfig.footer.trademarkNotice）
 
 
 --------------------------------------------------------------------------------

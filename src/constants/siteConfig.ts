@@ -2,6 +2,10 @@ export const siteConfig = {
   name: "SEW THE SOUND",
   artist: "jõgi mägi",
   artistKana: "ヨギマギ",
+  footer: {
+    trademarkNotice: "「音の刺繍」は商標登録出願中です。",
+  },
+
   statements: {
     main: "記憶を纏う、音の刺繍",
     sub: "声という指紋を、一生モノのアートに。\nその場の音を刺繍で刻むライブアート体験。",
