@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import type { CardConfig } from "@/constants/cards";
+import type { BusinessCardPage } from "@/constants/cards";
 import { cn } from "@/utils/cn";
 
 type BusinessCardProps = {
-  card: CardConfig;
+  card: BusinessCardPage;
 };
 
 export function BusinessCard({ card }: BusinessCardProps) {
