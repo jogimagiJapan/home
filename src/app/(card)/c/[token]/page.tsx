@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BusinessCard } from "@/components/card/BusinessCard";
-import { LinksBoard } from "@/components/card/LinksBoard";
 import { getCard } from "@/constants/cards";
 
 type PageProps = {
@@ -10,7 +9,7 @@ type PageProps = {
 
 export const metadata: Metadata = {
   title: "Card",
-  description: "Private landing page",
+  description: "Digital business card",
   robots: {
     index: false,
     follow: false,
@@ -25,23 +24,15 @@ export const metadata: Metadata = {
 
 export default async function CardPage({ params }: PageProps) {
   const { token } = await params;
-  const page = getCard(token);
+  const card = getCard(token);
 
-  if (!page || !page.active) {
+  if (!card || !card.active) {
     notFound();
-  }
-
-  if (page.kind === "links") {
-    return (
-      <main className="flex min-h-dvh items-center justify-center px-5 py-12">
-        <LinksBoard page={page} />
-      </main>
-    );
   }
 
   return (
     <main className="flex min-h-dvh items-center justify-center px-5 py-10">
-      <BusinessCard card={page} />
+      <BusinessCard card={card} />
     </main>
   );
 }

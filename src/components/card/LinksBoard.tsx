@@ -3,11 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Check, Copy, ExternalLink } from "lucide-react";
-import type { LinksPage } from "@/constants/cards";
+import type { LinksPageConfig } from "@/constants/linksPage";
 import { cn } from "@/utils/cn";
 
 type LinksBoardProps = {
-  page: LinksPage;
+  page: LinksPageConfig;
 };
 
 export function LinksBoard({ page }: LinksBoardProps) {
